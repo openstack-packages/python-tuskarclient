@@ -1,18 +1,17 @@
 Name:           python-tuskarclient
 Version:        0.1.1
-Release:        3%{?dist}
+Release:        2%{?dist}
 Summary:        Python client for the Tuskar API
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/python-tuskarclient
-Source0:        https://github.com/openstack/python-tuskarclient/archive/%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/p/python-tuskarclient/python-tuskarclient-%{version}.tar.gz
 
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
-Requires:       python-crypto >= 2.6
 Requires:       python-babel
 Requires:       python-iso8601
 Requires:       python-prettytable
@@ -41,14 +40,17 @@ rm -rf {test-,}requirements.txt
 
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
-rm -rf  %{buildroot}/%{python2_sitelib}/python_tuskarclient*
 
 %files
 %{_bindir}/*
 %{python2_sitelib}/tuskarclient*
+%{python2_sitelib}/python_tuskarclient*
 %doc LICENSE README.rst
 
 %changelog
+* Fri Mar 14 2014 Jordan OMara <jomara@redhat.com> - 0.1.1-2
+- fixed .egg-info
+
 * Fri Feb 28 2014 Jordan OMara <jomara@redhat.com> - 0.1.1-1
 - added .egg-info
 
