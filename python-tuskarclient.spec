@@ -1,6 +1,6 @@
 Name:           python-tuskarclient
-Version:        0.1.1
-Release:        2%{?dist}
+Version:        0.1.3
+Release:        1%{?dist}
 Summary:        Python client for the Tuskar API
 
 License:        ASL 2.0
@@ -48,6 +48,9 @@ rm -rf {test-,}requirements.txt
 %doc LICENSE README.rst
 
 %changelog
+* Fri Apr 4 2014 Jordan OMara <jomara@redhat.com> - 0.1.3-1
+- upgrading source
+
 * Fri Mar 14 2014 Jordan OMara <jomara@redhat.com> - 0.1.1-2
 - fixed .egg-info
 
