@@ -1,5 +1,5 @@
 Name:           python-tuskarclient
-Version:        0.1.3
+Version:        0.1.4
 Release:        1%{?dist}
 Summary:        Python client for the Tuskar API
 
@@ -48,6 +48,9 @@ rm -rf {test-,}requirements.txt
 %doc LICENSE README.rst
 
 %changelog
+* Wed Apr 16 2014 Jordan OMara <jomara@redhat.com> - 0.1.4-1
+- new src, 0.1.4 (jomara@redhat.com)
+
 * Fri Apr 4 2014 Jordan OMara <jomara@redhat.com> - 0.1.3-1
 - upgrading source
 
