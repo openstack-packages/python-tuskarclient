@@ -28,7 +28,7 @@ for Tuskar <https://github.com/openstack/tuskar>.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
 sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
 # Remove the requirements file so that pbr hooks don't add it
