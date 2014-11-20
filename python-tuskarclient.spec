@@ -1,6 +1,6 @@
 Name:           python-tuskarclient
-Version:        0.1.4
-Release:        2%{?dist}
+Version:        XXX
+Release:        XXX{?dist}
 Summary:        Python client for the Tuskar API
 
 License:        ASL 2.0
@@ -48,6 +48,9 @@ rm -rf {test-,}requirements.txt
 %doc LICENSE README.rst
 
 %changelog
+* Thu Oct 16 2014 Jordan OMara <jomara@redhat.com> - 0.1.5-1
+- new src, 0.1.5 (jomara@redhat.com)
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.1.4-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
