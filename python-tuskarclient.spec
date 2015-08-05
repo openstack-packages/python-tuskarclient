@@ -1,6 +1,6 @@
 Name:           python-tuskarclient
 Version:        XXX
-Release:        XXX{?dist}
+Release:        XXX
 Summary:        Python client for the Tuskar API
 
 License:        ASL 2.0
@@ -13,12 +13,15 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
 Requires:       python-babel
+Requires:       python-cliff
 Requires:       python-iso8601
+Requires:       python-openstackclient
 Requires:       python-prettytable
 Requires:       python-keystoneclient
-Requires:       python-requests
+Requires:       python-pbr
+Requires:       python-requests >= 2.5.2
 Requires:       python-simplejson
-Requires:       python-six
+Requires:       python-six >= 1.9.0
 Requires:       python-stevedore
 
 
@@ -42,33 +45,10 @@ rm -rf {test-,}requirements.txt
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
 %files
-%{_bindir}/*
+%{_bindir}/tuskar
 %{python2_sitelib}/tuskarclient*
 %{python2_sitelib}/python_tuskarclient*
-%doc LICENSE README.rst
+%doc README.rst
+%license LICENSE
 
 %changelog
-* Thu Oct 16 2014 Jordan OMara <jomara@redhat.com> - 0.1.5-1
-- new src, 0.1.5 (jomara@redhat.com)
-
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.1.4-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
-
-* Wed Apr 16 2014 Jordan OMara <jomara@redhat.com> - 0.1.4-1
-- new src, 0.1.4 (jomara@redhat.com)
-
-* Fri Apr 4 2014 Jordan OMara <jomara@redhat.com> - 0.1.3-1
-- upgrading source
-
-* Fri Mar 14 2014 Jordan OMara <jomara@redhat.com> - 0.1.1-2
-- fixed .egg-info
-
-* Fri Feb 28 2014 Jordan OMara <jomara@redhat.com> - 0.1.1-1
-- added .egg-info
-
-* Mon Feb 24 2014 Angus Thomas <athomas@redhat.com> - 0.1.0-2
-- Replace explicit paths with macros
-- Added LICENSE README.rst to docs
-
-* Fri Feb 21 2014 Angus Thomas <athomas@redhat.com> - 0.1.0-1
-- Initial package.
