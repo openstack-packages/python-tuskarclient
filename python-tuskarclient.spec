@@ -44,6 +44,9 @@ rm -rf {test-,}requirements.txt
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
+# Delete tests
+rm -fr %{buildroot}%{python_sitelib}/tuskarclient/tests
+
 %files
 %{_bindir}/tuskar
 %{python2_sitelib}/tuskarclient*
